@@ -3,9 +3,9 @@ This repository contains sample code for implementing an Azure AD B2C App in .NE
 
 # Demo
 <b> Access the app at <a href="https://uniccapp2.azurewebsites.net">App 2</a> </b>
-1. You will be directed to the sign in page or if you are signed into the linked App 1, you will be signed in directly (Single Sign On)
+1. You will be directed to the sign in page OR if you are signed into the linked App 1, you will be signed in directly (Single Sign On)
 2. Navigate to the sign in page.
-3. If the user has not provided a value for the game attribute, they will be prompted to edit their profile and provide a value for the game attribute.
+3. If the user has not provided a value for the game attribute, they will be prompted to edit their profile and provide a value for it.
 4. If the user has provided a value for the game attribute, they will be signed in directly to application 2.
 5. When the user signs out, they will also be signed out of the linked application 1 (Single Log Out).
 
@@ -26,14 +26,13 @@ To use this app, you will need the following:
 
 ### Serve app with different Azure account
 1. In the appsettings.json file, replace the placeholders with your Azure AD B2C tenant information.
-2. In the Startup.cs file, replace the placeholders with your Azure AD B2C policy information.
 
 ### Usage
 To use the app, follow these steps:
 
 1. Run the project.
 2. Navigate to the sign in page.
-3. If the user has not provided a value for the game attribute, they will be prompted to edit their profile and provide a value for the game attribute.
+3. If the user has not provided a value for the game attribute, they will be prompted to edit their profile and provide a value for it.
 4. If the user has provided a value for the game attribute, they will be signed in and redirected to the application 2.
 When the user signs out, they will also be signed out of the linked application 1.
 
