@@ -1,0 +1,67 @@
+<TrustFrameworkPolicy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/online/cpim/schemas/2013/06" PolicySchemaVersion="0.3.0.0" TenantId="unicc619.onmicrosoft.com" PolicyId="B2C_1A_TrustFrameworkExtensions" PublicPolicyUri="http://unicc619.onmicrosoft.com/B2C_1A_TrustFrameworkExtensions" TenantObjectId="8af80770-5886-4dd8-a739-d79f03f6d966">
+  <BasePolicy>
+    <TenantId>unicc619.onmicrosoft.com</TenantId>
+    <PolicyId>B2C_1A_TrustFrameworkLocalization</PolicyId>
+  </BasePolicy>
+  <BuildingBlocks>
+    <ClaimsSchema>
+      <ClaimType Id="extension_Color">
+        <DisplayName>Color</DisplayName>
+        <DataType>string</DataType>
+        <UserHelpText>Your Favorite Color</UserHelpText>
+        <UserInputType>TextBox</UserInputType>
+      </ClaimType>
+      <ClaimType Id="extension_Phone">
+        <DisplayName>Phone</DisplayName>
+        <DataType>string</DataType>
+        <UserHelpText>Your Phone Number</UserHelpText>
+        <UserInputType>TextBox</UserInputType>
+      </ClaimType>
+      <ClaimType Id="extension_Game">
+        <DisplayName>Game</DisplayName>
+        <DataType>string</DataType>
+        <UserHelpText>Your Favorite Game</UserHelpText>
+        <UserInputType>TextBox</UserInputType>
+      </ClaimType>
+      <ClaimType Id="extension_Movie">
+        <DisplayName>Movie</DisplayName>
+        <DataType>string</DataType>
+        <UserHelpText>Your Favorite Movie</UserHelpText>
+        <UserInputType>TextBox</UserInputType>
+      </ClaimType>
+    </ClaimsSchema>
+  </BuildingBlocks>
+  <ClaimsProviders>
+    <ClaimsProvider>
+      <DisplayName>Azure Active Directory</DisplayName>
+      <TechnicalProfiles>
+        <TechnicalProfile Id="AAD-Common">
+          <Metadata>
+            <!--Insert b2c-extensions-app application ID here, for example: 11111111-1111-1111-1111-111111111111-->
+            <Item Key="ClientId">0da31045-146b-4d51-b80b-58db0de6e055</Item>
+            <!--Insert b2c-extensions-app application ObjectId here, for example: 22222222-2222-2222-2222-222222222222-->
+            <Item Key="ApplicationObjectId">d1e57b5a-10f2-430f-b2f8-603f4785db5a</Item>
+          </Metadata>
+        </TechnicalProfile>
+      </TechnicalProfiles>
+    </ClaimsProvider>
+    <ClaimsProvider>
+      <DisplayName>Local Account SignIn</DisplayName>
+      <TechnicalProfiles>
+        <TechnicalProfile Id="login-NonInteractive">
+          <Metadata>
+            <Item Key="client_id">3ada4ed7-6e5a-429e-a6e1-18d213a6cda9</Item>
+            <Item Key="IdTokenAudience">13104adb-c894-4a2c-9601-dec582fe8676</Item>
+          </Metadata>
+          <InputClaims>
+            <InputClaim ClaimTypeReferenceId="client_id" DefaultValue="3ada4ed7-6e5a-429e-a6e1-18d213a6cda9" />
+            <InputClaim ClaimTypeReferenceId="resource_id" PartnerClaimType="resource" DefaultValue="13104adb-c894-4a2c-9601-dec582fe8676" />
+          </InputClaims>
+        </TechnicalProfile>
+      </TechnicalProfiles>
+    </ClaimsProvider>
+  </ClaimsProviders>
+  <!--UserJourneys>
+	
+	</UserJourneys-->
+</TrustFrameworkPolicy>
