@@ -15,11 +15,10 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        if (User.Claims.Select(c => c.Type).Contains("extension_Game"))
-        {
+        if (User.Identity.IsAuthenticated)
             return View();
-        }
-        return Redirect("/MicrosoftIdentity/Account/EditProfile");
+        else
+            return Redirect("/MicrosoftIdentity/Account/SignIn");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
