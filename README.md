@@ -1,5 +1,5 @@
 # Azure AD B2C App in .NET for User Sign In with Progressive Profile
-This repository contains sample code for implementing an Azure AD B2C App in .NET responsible for user sign in with a progressive profile. The app displays all existing attributes in edit mode, and prompts the user to provide an additional mandatory default attribute, game. Once the user provides a value for the game attribute, they will not be prompted to edit their profile on subsequent sign-ins. When users sign out, they will also be signed out of the linked application 1.
+This repository contains sample code for implementing an Azure AD B2C App in .NET responsible for user sign in with a progressive profile. The app displays all existing attributes in edit mode, and prompts the user to provide an additional mandatory default attribute, game. Once the user provides a value for the it, they will not be prompted to edit their profile on subsequent sign-ins. When users sign out, they will also be signed out of the linked application 1.
 
 # Demo
 <b> Access the app at <a href="https://uniccapp2.azurewebsites.net">App 2</a> </b>
